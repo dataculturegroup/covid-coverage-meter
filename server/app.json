@@ -1,0 +1,8 @@
+{
+  "name": "COVID Media Coverage Server",
+  "description": "Exposes an http API endpoint that returns simple data about coverage of COVID in US Media",
+  "scripts": {
+    "dokku": {
+    }
+  }
+}

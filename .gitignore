@@ -1,3 +1,5 @@
 .env
 .idea
 .pyc
+serer/.env
+__pycache__

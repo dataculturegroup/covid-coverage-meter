@@ -1,6 +1,7 @@
 import os
 import mediacloud.api
 from dotenv import load_dotenv
+import RPi.GPIO as GPIO
 
 load_dotenv()  # load config from .env file
 
@@ -18,4 +19,8 @@ def get_current_coverage():
     return current_value
 
 
-print(get_current_coverage())
+coverage = get_current_coverage()
+
+servoPIN = 17
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(servoPIN, GPIO.OUT)
