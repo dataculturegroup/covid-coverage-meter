@@ -47,7 +47,7 @@ void setup() {
 }
 
 int potPositionToDataIndex(int input) {
-  // input 1023-0, output 100-0
+  // input 1023-0, output DATA_SIZE-0
   float rangeWindow = (DATA_SIZE-1) / 7;
   float ratio;
   int index; // the output
@@ -68,7 +68,7 @@ int potPositionToDataIndex(int input) {
   } else {
     index = map(input, 0, 75, 0, rangeWindow);
   }
-  return index;
+  return DATA_SIZE-index;
 }
 
 int lastSensorValue = 0;
